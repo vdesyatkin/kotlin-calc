@@ -28,7 +28,7 @@ or almost the same with a statefull class (finding a sequence of prime numbers)
 };
 @erato.@next.method {
 	if (this.@current == 2, { this.@current = 3; return 2 });
-    range(this.@current ^ 2, this.@max, this.@current).foreach(@i -> {
+	range(this.@current ^ 2, this.@max, this.@current).foreach(@i -> {
 		if (@i % 2 == 1, this.@arr.set(floor(@i / 2) - 1, 1))
 	});
 	@prime = if (this.@arr.get(floor(this.@current / 2) - 1) == 0, this.@current, null);
